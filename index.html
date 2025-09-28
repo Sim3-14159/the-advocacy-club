@@ -20,10 +20,10 @@
     }
 
     header img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-    }
+  width: 100%;
+  height: auto;
+}
+
 
     .btn-sign {
       display: inline-block;
@@ -171,12 +171,56 @@
       color: #2d5c47;
       text-decoration: none;
     }
+
+.hero-container {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .hero-image {
+      width: 100%;
+      display: block;
+    }
+
+    .hero-text-left,
+    .hero-text-right {
+      position: absolute;
+      top: 20px;
+      font-size: 5em;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      margin: 0;
+    }
+
+    .hero-text-left {
+      left: 20px;
+      text-align: left;
+    }
+
+    .hero-text-right {
+      right: 20px;
+      Top: 100px;
+      text-align: right;
+    }
+
+    @media (max-width: 768px) {
+      .hero-text-left, .hero-text-right {
+        font-size: 2.5em;
+        top: 10px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="https://preview.redd.it/found-duck-with-a-fishing-line-wrapped-around-its-leg-v0-8cf4x9jb118d1.jpg?width=1080&crop=smart&auto=webp&s=459a6fdf3e48592e3ad097b38d1b054756503a0c" alt="Sea turtle entangled in fishing line">
+    <div class="hero-container">
+    <img src="https://assets.change.org/photos/0/kh/jx/ddKHJXeJylFWgpl-800x450-noPad.jpg?1756668338" alt="Sea turtle entangled in fishing line" class="hero-image">
+    <h1 class="hero-text-left">Astra Nova<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAsVBMVEX////zxcbZJCzaLDPtpafVAADuqqz+9/jXGSHlen7WAA/mgYT54OHeTFHWDhjfU1fzv8Hrmpz98fLjbnLXFSH32NnVACLjdxrkfhjcP0X34wnxtrjolBb58Ab46Qjpj5HSAADutRL57QfdTR7hYmb00gzrgAf/+gD/8QBAUno6TnxJXHyYorszR344TIIgOnft7vM6TYFxfaHT1uEeOHZLXIuyucuNl7Nmc5vFytg7ToJvXIcRAAABDElEQVR4AXyPhQGEMBAEsXvc3V37L/BJcAmDMxtZ6gZNU98w7LfnAH5fngdBAP4jIEqCIMlkr4AwAwoxoGoooOkkb4CAAVJVYYN59yZsAeDevLV7QlVbQspx0F0Sn94FZDw/8AhVQw0HoshzUFX17mPAPknTZJnCuAXweEdIsyydHzPa1ecFnqCssqwqlynMZ0WnTrOZtHZwwqIOmmWHbYUCVevhqvbh6QIQXT9g+g4QBX2ssDBO0/hvU16OAARhKAC+m3fb0BAif/svTIdxEAh73urYqw2jk8yHTyxYloYttIukoQuK89LxDrNgpGMCJpFlwBEjkglhkHRI6Fgvirf4ZRKFMprC9wIXvB6clzZtMcWHrwAAAABJRU5ErkJggg=="></h1>
+    <h1 class="hero-text-right">Advocacy Club</h1>
+  </div>
     <a href="#" class="btn-sign">Sign the Petition</a>
   </header>
 
