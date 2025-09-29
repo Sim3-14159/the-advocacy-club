@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fishing Line Awareness Petition</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<script>
+  const petition_url = "https://www.change.org/p/eliminate-harm-to-wildlife-resulting-from-fishing-wire-misuse?recruiter=1386866053&recruited_by_id=c94c4920-869e-11f0-be1d-6dde823d91a4&utm_source=share_petition&utm_campaign=share_petition&utm_term=petition_dashboard&utm_medium=copylink&utm_content=cl_sharecopy_490746259_en-US%3A7";
+
+  window.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("sidebar-petition-link").href = petition_url;
+    document.getElementById("header-petition-link").href = petition_url;
+    document.getElementById("footer-petition-link").href = petition_url;
+  });
+</script>
+
+  <!-- 🔘 Astra Nova Icon Button (Standalone) -->
+  <button class="menu-button" onclick="toggleSidebar()" aria-label="Open menu">
+    <img src="./images/Astra-Nova.png" alt="Open Menu" />
+  </button>
+
+  <!-- 📑 Slide-Out Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <button class="closebtn" onclick="toggleSidebar()">&times;</button>
+    <br>
+    <a href="#about">About</a>
+    <a href="#solutions">Solutions</a>
+    <a id="sidebar-petition-link" href="#petition">Petition</a>
+  </div>
+
+  <header>
+    <div class="hero-container">
+      <img src="https://assets.change.org/photos/0/kh/jx/ddKHJXeJylFWgpl-800x450-noPad.jpg?1756668338" alt="Unable to load image of duck tangled in fishing line." class="hero-image" />
+      <h1 class="hero-text-left">The</h1>
+      <h1 class="hero-text-right">Advocacy Club</h1>
+    </div><br />
+    <a id="header-petition-link" class="btn-sign" href="#">
+      Sign the Petition 🐣
+    </a>
+  </header>
+  <hr class="h_rule">
+<!-------------------------------------------------------------->
+  <!-- 🔍 Extended Solutions / About Info -->
+  <section>
+    <div class="section-title">About Our Work</div>
+    <p>
+      Our mission goes beyond awareness — we’re working on **real, measurable environmental impact** by tackling the widespread issue of fishing line pollution.
+    </p>
+
+    <h3>📘 Research & Data Collection</h3>
+    <p>We collaborate with local wildlife organizations to gather data on injury rates, plastic accumulation in ecosystems, and behavioral studies of affected wildlife.</p>
+
+    <h3>♻️ Recycling Infrastructure Expansion</h3>
+    <p>We're actively lobbying local parks and recreation departments to install dedicated monofilament recycling bins, providing training for maintenance staff and signage for public education.</p>
+
+    <h3>📣 Policy Advocacy</h3>
+    <p>Our team is pushing for legislation that requires fishing stores to stock biodegradable lines and support take-back programs for old lines.</p>
+
+    <h3>🎓 Community Education</h3>
+    <p>We hold monthly workshops, distribute flyers, and speak at schools to help the next generation of fishers understand the importance of responsible line disposal.</p>
+
+    <div class="social-icons">
+      <a href="#"><img src="https://img.icons8.com/ios-filled/30/slack-new.png" alt="Slack" /></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/30/facebook-new.png" alt="Facebook" /></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/30/instagram-new.png" alt="Instagram" /></a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="section-title">Resources / Learn More</div>
+    <p>
+      • Want to contribute? Consider <u><strong><a href="index.html#petition">signing or donating</a></strong></u>.<br />
+      • Join us in <code style="color: #47b; background-color: #adf; border-radius: 3px;">#advocacy-club</code> on Slack or at <u><strong><a href="https://anovastudents.slack.com">anovastudents.slack.com</a></strong></u>.
+    </p>
+  </footer>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      const menuImg = document.querySelector(".menu-button img");
+      const isOpen = sidebar.style.width === "250px";
+      sidebar.style.width = isOpen ? "0" : "250px";
+      if (!isOpen) menuImg.classList.add("rotate");
+      else menuImg.classList.remove("rotate");
+    }
+
+    document.addEventListener("click", function (event) {
+      const sidebar = document.getElementById("sidebar");
+      const button = document.querySelector(".menu-button");
+      const menuImg = document.querySelector(".menu-button img");
+      if (
+        sidebar.style.width === "250px" &&
+        !sidebar.contains(event.target) &&
+        !button.contains(event.target)
+      ) {
+        sidebar.style.width = "0";
+        menuImg.classList.remove("rotate");
+      }
+    });
+  </script>
+</body>
+</html>

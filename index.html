@@ -26,8 +26,9 @@
 
   <!-- 📑 Slide-Out Sidebar -->
   <div id="sidebar" class="sidebar">
-    <button class="closebtn" onclick="toggleSidebar()">&times;</button>
-    <a href="#about">About</a>
+    <button class="closebtn" onclick="toggleSidebar()">&times;</button><br>
+    <a id="showContent('about')">About</a>
+    <a href="https://Sim3-14159.github.io/astra-nova-advocacy">Home</a>
     <a href="#solutions">Solutions</a>
     <a id="sidebar-petition-link" href="#">Petition</a>
   </div>
@@ -43,6 +44,7 @@
       <img src="./images/Astra-Nova.png" alt="Astra Nova logo" class="inline-logo" />
     </a>
   </header>
+<main id="content">
   <hr class="h_rule">
   <section id="about">
     <div class="section-title">About / The Issue</div>
@@ -70,7 +72,7 @@
       <div class="solution-item">
         <img src="https://img.icons8.com/ios-filled/50/conference.png" alt="community events icon" />
         <p>Community events & outreach</p>
-      </div><br><br><br />
+      </div></main><br><br><br />
 
 <!--
     </div><br><hr class="h_rule-small"><br><br>
@@ -148,6 +150,33 @@
     }
   });
 </script>
+<!-- JavaScript for about page -->
+<script>
+    function showContent(section) {
+      const content = document.getElementById("content");
+      if (section === "home") {
+        content.innerHTML = `
+          <h2>Home</h2>
+          <p>Welcome to the homepage! Click the buttons above to explore more.</p>
+        `;
+      } else if (section === "about") {
+        content.innerHTML = `
+          <h2>About Us</h2>
+          <p>We are passionate about building simple and elegant websites for everyone.</p>
+        `;
+      } else if (section === "services") {
+        content.innerHTML = `
+          <h2>Our Services</h2>
+          <p>We offer web design, development, and consulting services.</p>
+        `;
+      } else if (section === "contact") {
+        content.innerHTML = `
+          <h2>Contact Us</h2>
+          <p>Reach out via email at contact@example.com or call us at 123-456-7890.</p>
+        `;
+      }
+    }
+  </script>
 
 </body>
 </html>
