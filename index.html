@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fishing Line Awareness Petition</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -14,16 +15,70 @@
       line-height: 1.6;
     }
 
+    /* ==== Sidebar Styles ==== */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 2000;
+      top: 0;
+      left: 0;
+      background-color: #2d5c47;
+      overflow-x: hidden;
+      transition: 0.3s ease;
+      padding-top: 60px;
+    }
+
+    .sidebar a {
+      padding: 12px 24px;
+      text-decoration: none;
+      font-size: 1.2em;
+      color: white;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      background-color: #3e7a64;
+    }
+
+    .sidebar .closebtn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 2em;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* ==== Menu Button ==== */
+    .menu-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 2100;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .menu-button img {
+      width: 50px;
+      height: auto;
+    }
+
     header {
       text-align: center;
       padding: 20px;
     }
 
     header img {
-  width: 100%;
-  height: auto;
-}
-
+      width: 100%;
+      height: auto;
+    }
 
     .btn-sign {
       display: inline-block;
@@ -172,7 +227,7 @@
       text-decoration: none;
     }
 
-.hero-container {
+    .hero-container {
       position: relative;
       width: 100%;
       max-width: 1000px;
@@ -196,12 +251,13 @@
 
     .hero-text-left {
       left: 20px;
+      top: 20px;
       text-align: left;
     }
 
     .hero-text-right {
       right: 20px;
-      Top: 100px;
+      top: 100px;
       text-align: right;
     }
 
@@ -211,24 +267,55 @@
         top: 10px;
       }
     }
+
+    .inline-logo {
+      vertical-align: middle;
+      height: 1em;
+      width: auto;
+      margin-left: 0.3em;
+      display: inline-block;
+    }
   </style>
 </head>
+
 <body>
+<script>
+  const petition_url = "https://www.change.org/p/eliminate-harm-to-wildlife-resulting-from-fishing-wire-misuse?recruiter=1386866053&recruited_by_id=c94c4920-869e-11f0-be1d-6dde823d91a4&utm_source=share_petition&utm_campaign=share_petition&utm_term=petition_dashboard&utm_medium=copylink&utm_content=cl_sharecopy_490746259_en-US%3A7";
+
+  window.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("petition-link").href = petition_url;
+  });
+</script>
+
+
+  <!-- 🔘 Astra Nova Icon Button (Standalone) -->
+  <button class="menu-button" onclick="toggleSidebar()" aria-label="Open menu">
+    <img src="./images/Astra-Nova.png" alt="Open Menu">
+  </button>
+
+  <!-- 📑 Slide-Out Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <button class="closebtn" onclick="toggleSidebar()">&times;</button>
+    <a href="#about">About</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#petition">Petition</a>
+  </div>
 
   <header>
     <div class="hero-container">
-    <img src="https://assets.change.org/photos/0/kh/jx/ddKHJXeJylFWgpl-800x450-noPad.jpg?1756668338" alt="Sea turtle entangled in fishing line" class="hero-image">
-    <h1 class="hero-text-left">
-  Astra Nova
-  <img src="./images/Astra-Nova.png" alt="My Image" style="vertical-align: middle; height: 1em;">
-</h1>
-
-    <h1 class="hero-text-right">Advocacy Club</h1>
-  </div>
-    <a href="#" class="btn-sign">Sign the Petition</a>
+      <img src="https://assets.change.org/photos/0/kh/jx/ddKHJXeJylFWgpl-800x450-noPad.jpg?1756668338" alt="Unable to load image of duck tangled in fishing line." class="hero-image">
+      <h1 class="hero-text-left">
+        Astra Nova
+      </h1>
+      <h1 class="hero-text-right">Advocacy Club</h1>
+    </div><br>
+    <a id="petition-link" class="btn-sign">
+  Sign the Petition
+  <img src="./images/Astra-Nova.png" alt="Astra Nova logo" class="inline-logo">
+</a>
   </header>
 
-  <section>
+  <section id="about">
     <div class="section-title">About / The Issue</div>
     <div class="issue-summary">
       <div class="issue-text">
@@ -240,7 +327,7 @@
       </div>
     </div>
 
-    <div class="section-title">Solutions / What We’re Doing</div>
+    <div class="section-title" id="solutions">Solutions / What We’re Doing</div>
     <div class="solutions">
       <div class="solution-item">
         <img src="https://img.icons8.com/ios-filled/50/leaf.png" alt="biodegradable icon" />
@@ -256,7 +343,7 @@
       </div>
     </div>
 
-    <div class="section-title">Take Action / Petition Form</div>
+    <div class="section-title" id="petition">Take Action / Petition Form</div>
     <form class="petition-form">
       <div class="form-row">
         <div>
@@ -288,11 +375,31 @@
     </div>
   </section>
 
-  <footer>
+  <footer id="resources">
     <div class="section-title">Resources / Learn More</div>
     <p>• Links to studies, articles, organizations<br>
     • Tips for safe fishing line disposal</p>
   </footer>
 
+  <!-- ⚙️ JavaScript for Sidebar -->
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
+    }
+
+    // Optional: close sidebar if clicked outside
+    document.addEventListener("click", function (event) {
+      const sidebar = document.getElementById("sidebar");
+      const button = document.querySelector('.menu-button');
+      if (
+        sidebar.style.width === "250px" &&
+        !sidebar.contains(event.target) &&
+        !button.contains(event.target)
+      ) {
+        sidebar.style.width = "0";
+      }
+    });
+  </script>
 </body>
 </html>
