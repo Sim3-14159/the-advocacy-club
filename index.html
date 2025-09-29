@@ -275,6 +275,28 @@
       margin-left: 0.3em;
       display: inline-block;
     }
+
+    .jumbotron {
+      background-color: #ccc;
+      padding: 40px 30px;
+      border-radius: 12px;
+      margin: 30px auto;
+      max-width: 900px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      color: white; /* white text on black background */
+    }
+
+    .jumbotron h2 {
+      margin-top: 0;
+      font-size: 2em;
+      color: #2d5c47;
+    }
+
+    .jumbotron p {
+      font-size: 1.2em;
+      color: #135;
+    }
   </style>
 </head>
 
@@ -283,14 +305,14 @@
   const petition_url = "https://www.change.org/p/eliminate-harm-to-wildlife-resulting-from-fishing-wire-misuse?recruiter=1386866053&recruited_by_id=c94c4920-869e-11f0-be1d-6dde823d91a4&utm_source=share_petition&utm_campaign=share_petition&utm_term=petition_dashboard&utm_medium=copylink&utm_content=cl_sharecopy_490746259_en-US%3A7";
 
   window.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("petition-link").href = petition_url;
+    document.getElementById("sidebar-petition-link").href = petition_url;
+    document.getElementById("header-petition-link").href = petition_url;
   });
 </script>
 
-
   <!-- 🔘 Astra Nova Icon Button (Standalone) -->
   <button class="menu-button" onclick="toggleSidebar()" aria-label="Open menu">
-    <img src="./images/Astra-Nova.png" alt="Open Menu">
+    <img src="./images/Astra-Nova.png" alt="Open Menu" />
   </button>
 
   <!-- 📑 Slide-Out Sidebar -->
@@ -298,29 +320,28 @@
     <button class="closebtn" onclick="toggleSidebar()">&times;</button>
     <a href="#about">About</a>
     <a href="#solutions">Solutions</a>
-    <a href="#petition">Petition</a>
+    <a id="sidebar-petition-link" href="#">Petition</a>
   </div>
 
   <header>
     <div class="hero-container">
-      <img src="https://assets.change.org/photos/0/kh/jx/ddKHJXeJylFWgpl-800x450-noPad.jpg?1756668338" alt="Unable to load image of duck tangled in fishing line." class="hero-image">
-      <h1 class="hero-text-left">
-        Astra Nova
-      </h1>
+      <img src="https://assets.change.org/photos/0/kh/jx/ddKHJXeJylFWgpl-800x450-noPad.jpg?1756668338" alt="Unable to load image of duck tangled in fishing line." class="hero-image" />
+      <h1 class="hero-text-left">Astra Nova</h1>
       <h1 class="hero-text-right">Advocacy Club</h1>
-    </div><br>
-    <a id="petition-link" class="btn-sign">
-  Sign the Petition
-  <img src="./images/Astra-Nova.png" alt="Astra Nova logo" class="inline-logo">
-</a>
+    </div><br />
+    <a id="header-petition-link" class="btn-sign" href="#">
+      Sign the Petition
+      <img src="./images/Astra-Nova.png" alt="Astra Nova logo" class="inline-logo" />
+    </a>
   </header>
 
   <section id="about">
     <div class="section-title">About / The Issue</div>
     <div class="issue-summary">
-      <div class="issue-text">
-        Millions of animals are injured yearly by fishing line. It can take 600 years to decompose.
+      <div class="jumbotron">
+        <p>&ensp;&ensp;Millions of animals are injured by fishing line each year. It can take up to 600 years to decompose.&ensp;&ensp;</p>
       </div>
+
       <div class="stat-box">
         <img src="https://img.icons8.com/ios-filled/50/animal-shelter.png" alt="animal icon" />
         <p><strong>Millions of animals injured yearly</strong></p>
@@ -334,7 +355,7 @@
         <p>Biodegradable lines</p>
       </div>
       <div class="solution-item">
-        <img src="https://img.icons8.com/ios-filled/50/recycle.png" alt="recycling bin icon" />
+        <img src="./images/recycle-bin.png" style="transform: scale(1.3);" alt="recycling bin icon" />
         <p>Recycling bins</p>
       </div>
       <div class="solution-item">
@@ -347,15 +368,15 @@
     <form class="petition-form">
       <div class="form-row">
         <div>
-          <input type="text" placeholder="Name" required>
+          <input type="text" placeholder="Name" required />
         </div>
         <div>
-          <input type="email" placeholder="Email" required>
+          <input type="email" placeholder="Email" required />
         </div>
       </div>
       <div class="form-row">
         <div>
-          <input type="text" placeholder="Zip Code" required>
+          <input type="text" placeholder="Zip Code" required />
         </div>
         <div>
           <textarea placeholder="Comments" rows="2"></textarea>
@@ -365,9 +386,9 @@
     </form>
 
     <div class="social-icons">
-      <a href="#"><img src="https://img.icons8.com/ios-filled/30/twitter.png" alt="Twitter"></a>
-      <a href="#"><img src="https://img.icons8.com/ios-filled/30/facebook-new.png" alt="Facebook"></a>
-      <a href="#"><img src="https://img.icons8.com/ios-filled/30/instagram-new.png" alt="Instagram"></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/30/twitter.png" alt="Twitter" /></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/30/facebook-new.png" alt="Facebook" /></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/30/instagram-new.png" alt="Instagram" /></a>
     </div>
 
     <div class="progress-bar">
@@ -377,8 +398,10 @@
 
   <footer id="resources">
     <div class="section-title">Resources / Learn More</div>
-    <p>• Links to studies, articles, organizations<br>
-    • Tips for safe fishing line disposal</p>
+    <p>
+      • Links to studies, articles, organizations<br />
+      • Tips for safe fishing line disposal
+    </p>
   </footer>
 
   <!-- ⚙️ JavaScript for Sidebar -->
@@ -391,7 +414,7 @@
     // Optional: close sidebar if clicked outside
     document.addEventListener("click", function (event) {
       const sidebar = document.getElementById("sidebar");
-      const button = document.querySelector('.menu-button');
+      const button = document.querySelector(".menu-button");
       if (
         sidebar.style.width === "250px" &&
         !sidebar.contains(event.target) &&
