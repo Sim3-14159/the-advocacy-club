@@ -15,6 +15,7 @@
   window.addEventListener("DOMContentLoaded", function () {
     document.getElementById("sidebar-petition-link").href = petition_url;
     document.getElementById("header-petition-link").href = petition_url;
+    document.getElementById("footer-petition-link").href = petition_url;
   });
 </script>
 
@@ -69,7 +70,9 @@
       <div class="solution-item">
         <img src="https://img.icons8.com/ios-filled/50/conference.png" alt="community events icon" />
         <p>Community events & outreach</p>
-      </div>
+      </div><br><br><br />
+
+<!--
     </div><br><hr class="h_rule-small"><br><br>
     <div class="section-title" id="petition">Take Action / Petition Form</div>
     <form class="petition-form">
@@ -91,9 +94,9 @@
       </div>
       <button type="submit">Submit</button>
     </form>
-
+-->
     <div class="social-icons">
-      <a href="#"><img src="https://img.icons8.com/ios-filled/30/twitter.png" alt="Twitter" /></a>
+      <a href="#"><img src="https://img.icons8.com/ios-filled/30/slack-new.png" alt="Slack" /></a>
       <a href="#"><img src="https://img.icons8.com/ios-filled/30/facebook-new.png" alt="Facebook" /></a>
       <a href="#"><img src="https://img.icons8.com/ios-filled/30/instagram-new.png" alt="Instagram" /></a>
     </div>
@@ -105,31 +108,46 @@
 
   <footer id="resources">
     <div class="section-title">Resources / Learn More</div>
-    <p>
-      • Links to studies, articles, organizations<br />
-      • Tips for safe fishing line disposal
+    <p style="text-align: left; margin-left: 30px;">
+      • Haven't signed the form? Consider donating <u><strong><a id="footer-petition-link" href="#donate">here</a></strong></u>.<br />
+      • Tips for safe fishing line disposal<br />
+      • Go to <u><strong><a href="https://anovastudents.slack.com">https://anovastudents.slack.com</a></strong></u> or chat in the <code style="color: #47b; background-color: #adf; border-radius: 3px;">#advocacy-club</code>.
     </p>
   </footer>
 
   <!-- ⚙️ JavaScript for Sidebar -->
   <script>
-    function toggleSidebar() {
-      const sidebar = document.getElementById("sidebar");
-      sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
-    }
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const menuImg = document.querySelector(".menu-button img");
 
-    // Optional: close sidebar if clicked outside
-    document.addEventListener("click", function (event) {
-      const sidebar = document.getElementById("sidebar");
-      const button = document.querySelector(".menu-button");
-      if (
-        sidebar.style.width === "250px" &&
-        !sidebar.contains(event.target) &&
-        !button.contains(event.target)
-      ) {
-        sidebar.style.width = "0";
-      }
-    });
-  </script>
+    const isOpen = sidebar.style.width === "250px";
+    sidebar.style.width = isOpen ? "0" : "250px";
+
+    // Add or remove rotation class
+    if (!isOpen) {
+      menuImg.classList.add("rotate");
+    } else {
+      menuImg.classList.remove("rotate");
+    }
+  }
+
+  // Optional: Close sidebar if clicked outside
+  document.addEventListener("click", function (event) {
+    const sidebar = document.getElementById("sidebar");
+    const button = document.querySelector(".menu-button");
+    const menuImg = document.querySelector(".menu-button img");
+
+    if (
+      sidebar.style.width === "250px" &&
+      !sidebar.contains(event.target) &&
+      !button.contains(event.target)
+    ) {
+      sidebar.style.width = "0";
+      menuImg.classList.remove("rotate");
+    }
+  });
+</script>
+
 </body>
 </html>
