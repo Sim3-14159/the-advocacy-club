@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fishing Line Awareness Petition</title>
-
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -19,30 +18,36 @@
   });
 </script>
 
-  <!-- 🔘 Astra Nova Icon Button (Standalone) -->
-  <button class="menu-button" onclick="toggleSidebar()" aria-label="Open menu">
-    <img src="./images/Astra-Nova.png" alt="Open Menu" />
-  </button>
+<!-- 🔘 Astra Nova Icon Button (Standalone) -->
+<button class="menu-button" onclick="toggleSidebar()" aria-label="Open menu">
+  <img src="./images/Astra-Nova.png" alt="Open Menu" />
+</button>
 
-  <!-- 📑 Slide-Out Sidebar -->
-  <div id="sidebar" class="sidebar">
-    <button class="closebtn" onclick="toggleSidebar()">&times;</button><br>
-    <a href="./about.html">About</a>
-    <a href="https://Sim3-14159.github.io/the-advocacy-club">Home</a>
-    <a href="#solutions">Solutions</a>
-    <a id="sidebar-petition-link" href="#">Petition</a>
-  </div>
+<!-- 📑 Slide-Out Sidebar -->
+<div id="sidebar" class="sidebar">
+  <button class="closebtn" onclick="toggleSidebar()">&times;</button><br>
+  <a href="./about.html">About</a>
+  <a href="https://Sim3-14159.github.io/the-advocacy-club">Home</a>
+  <a href="#solutions">Solutions</a>
+  <a id="sidebar-petition-link" href="#">Petition</a>
+</div>
 
-  <header>
-    <div class="hero-container">
-      <img src="https://assets.change.org/photos/0/kh/jx/ddKHJXeJylFWgpl-800x450-noPad.jpg?1756668338" alt="Unable to load image of duck tangled in fishing line." class="hero-image" />
-      <h1 class="hero-text-left">The</h1>
-      <h1 class="hero-text-right">Advocacy Club</h1>
-    </div><br />
-    <a id="header-petition-link" class="btn-sign" href="#">
-      Sign the Petition 🐣
-    </a>
-  </header>
+<header>
+  <div class="hero-container">
+    <img src="https://assets.change.org/photos/0/kh/jx/ddKHJXeJylFWgpl-800x450-noPad.jpg?1756668338" alt="Unable to load image of duck tangled in fishing line." class="hero-image" />
+
+    <!-- ✅ Updated text structure -->
+    <div class="hero-text-wrapper">
+      <div class="hero-text hero-text-left">The</div>
+      <div class="hero-text hero-text-right">Advocacy Club</div>
+    </div>
+  </div><br />
+  
+  <a id="header-petition-link" class="btn-sign" href="#">
+    Sign the Petition 🐣
+  </a>
+</header>
+
 <main id="content">
   <hr class="h_rule">
   <section id="about">
@@ -56,7 +61,7 @@
         <img src="https://img.icons8.com/ios-filled/50/animal-shelter.png" alt="animal icon" />
         <p><strong>Millions of animals injured yearly</strong></p>
       </div>
-    </div><br><hr class="h_rule-small"<br><br>
+    </div><br><hr class="h_rule-small"><br><br>
 
     <div class="section-title" id="solutions">Solutions / What We’re Doing</div>
     <div class="solutions">
@@ -72,10 +77,10 @@
         <img src="https://img.icons8.com/ios-filled/50/conference.png" alt="community events icon" />
         <p>Community events & outreach</p>
       </div>
-</main><br><br><br />
+    </div>
+  </section><br><br><br />
 
 <!--
-    </div><br><hr class="h_rule-small"><br><br>
     <div class="section-title" id="petition">Take Action / Petition Form</div>
     <form class="petition-form">
       <div class="form-row">
@@ -97,28 +102,29 @@
       <button type="submit">Submit</button>
     </form>
 -->
-    <div class="social-icons">
-      <a href="#"><img src="https://img.icons8.com/ios-filled/30/slack-new.png" alt="Slack" /></a>
-      <a href="#"><img src="https://img.icons8.com/ios-filled/30/discord.png" alt="Discord" /></a>
-      <a href="#"><img src="https://img.icons8.com/ios-filled/30/instagram-new.png" alt="Instagram" /></a>
-    </div>
 
-    <div class="progress-bar">
-      <div class="progress-bar-fill"></div>
-    </div>
-  </section>
+  <div class="social-icons">
+    <a href="#"><img src="https://img.icons8.com/ios-filled/30/slack-new.png" alt="Slack" /></a>
+    <a href="#"><img src="https://img.icons8.com/ios-filled/30/discord.png" alt="Discord" /></a>
+    <a href="#"><img src="https://img.icons8.com/ios-filled/30/instagram-new.png" alt="Instagram" /></a>
+  </div>
 
-  <footer id="resources">
-    <div class="section-title">Resources / Learn More</div>
-    <p style="text-align: left; margin-left: 30px;">
-      • Haven't signed the form? Consider donating <u><strong><a id="footer-petition-link" href="#donate">here</a></strong></u>.<br />
-      • Tips for safe fishing line disposal<br />
-      • Go to <u><strong><a href="https://anovastudents.slack.com">https://anovastudents.slack.com</a></strong></u> or chat in the <code style="color: #47b; background-color: #adf; border-radius: 3px;">#advocacy-club</code>.
-    </p>
-  </footer>
+  <div class="progress-bar">
+    <div class="progress-bar-fill"></div>
+  </div>
+</main>
 
-  <!-- ⚙️ JavaScript for Sidebar -->
-  <script>
+<footer id="resources">
+  <div class="section-title">Resources / Learn More</div>
+  <p style="text-align: left; margin-left: 30px;">
+    • Haven't signed the form? Consider donating <u><strong><a id="footer-petition-link" href="#donate">here</a></strong></u>.<br />
+    • Tips for safe fishing line disposal<br />
+    • Go to <u><strong><a href="https://anovastudents.slack.com">https://anovastudents.slack.com</a></strong></u> or chat in the <code style="color: #47b; background-color: #adf; border-radius: 3px;">#advocacy-club</code>.
+  </p>
+</footer>
+
+<!-- ⚙️ JavaScript for Sidebar -->
+<script>
   function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
     const menuImg = document.querySelector(".menu-button img");
@@ -126,7 +132,6 @@
     const isOpen = sidebar.style.width === "250px";
     sidebar.style.width = isOpen ? "0" : "250px";
 
-    // Add or remove rotation class
     if (!isOpen) {
       menuImg.classList.add("rotate");
     } else {
@@ -134,7 +139,6 @@
     }
   }
 
-  // Optional: Close sidebar if clicked outside
   document.addEventListener("click", function (event) {
     const sidebar = document.getElementById("sidebar");
     const button = document.querySelector(".menu-button");
@@ -150,20 +154,20 @@
     }
   });
 </script>
-<!-- JavaScript for about page (may not be used)-->
+
 <script>
-    function showContent(section) {
-      const content = document.getElementById("content");
-      if (section === "home") {
-        content.innerHTML = `
-          <p>
+  function showContent(section) {
+    const content = document.getElementById("content");
+    if (section === "home") {
+      content.innerHTML = `
+        <p>
 <strong>The Advocacy Club</strong> is a middle school–run movement that began at Astronova with a simple idea: young people can create real change. What started as a small group of students passionate about protecting the planet has quickly grown into an international initiative. Today, The Advocacy Club is active in 5 countries and 7 states, proving that the power of youth leadership can cross borders and inspire communities everywhere. Our mission is simple: protect wildlife, safeguard natural spaces, and advocate for smarter policies that balance human enjoyment with environmental responsibility. We don’t just talk about making a difference — we organize, educate, and take action.
 Our current campaign focuses on one of the most overlooked threats to wildlife: discarded fishing line. Each year, countless birds, turtles, fish, and marine mammals suffer slow, painful deaths from entanglement, and yet this problem is completely preventable. By calling for biodegradable alternatives, recycling systems, and stronger park management, we are working to protect both wildlife and future generations. The Advocacy Club shows that when students unite — across neighborhoods, schools, and even countries — we can create lasting change. Together, we can protect every lake, river, and ocean.
-          </p>
-        `;
-      } 
-    }
-  </script>
+        </p>
+      `;
+    } 
+  }
+</script>
 
 </body>
 </html>
