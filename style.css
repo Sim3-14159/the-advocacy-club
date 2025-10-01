@@ -91,12 +91,14 @@ header {
 }
 
 .hero-text {
-  width: 100%;
   font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: clamp(2rem, 8vw, 5rem);
+  line-height: 1.2;
+  width: 100%;
   color: white;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
   padding: 0 20px;
-  font-size: clamp(20px, 6vw, 72px);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -109,7 +111,7 @@ header {
 
 .hero-text-right {
   text-align: right;
-  margin-top: 1em;
+  margin-top: 0.8em;
 }
 
 /* === Responsive Font for Small Devices === */
