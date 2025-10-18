@@ -5,3 +5,9 @@
 Our current campaign focuses on one of the most overlooked threats to wildlife: discarded fishing line. Each year, countless birds, turtles, fish, and marine mammals suffer slow, painful deaths from entanglement, and yet this problem is completely preventable. By calling for biodegradable alternatives, recycling systems, and stronger park management, we are working to protect both wildlife and future generations. The Advocacy Club shows that when students unite — across neighborhoods, schools, and even countries — we can create lasting change. Together, we can protect every lake, river, and ocean.
 
 You can visit our website [here](https://Sim3-14159.github.io/the-advocacy-club).
+
+<div align="center">
+  
+  <sub>$\color{grey}\text{Copyright &copy; 2025 Sim3-14159. Images by Icons8.}$</sub>
+  
+</div>
