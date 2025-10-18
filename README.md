@@ -8,6 +8,6 @@ You can visit our website [here](https://Sim3-14159.github.io/the-advocacy-club)
 
 <div align="center">
   
-  <sub>$\color{grey}\text{Copyright &copy; 2025 Sim3-14159. Images by Icons8.}$</sub>
+  <sub>$\color{grey}\text{Copyright &copy; 2025 Sim3-14159. Icons by Icons8.}$</sub>
   
 </div>
